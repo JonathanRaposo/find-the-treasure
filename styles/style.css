@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@400;700&family=Rubik+Dirt&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik Dirt';
+    background-image: linear-gradient(to right, rgba(158, 218, 236, 0.9), rgba(158, 218, 236, 0.8)), url('../images/palm-trees.png');
+    background-size: cover;
+    opacity: 0.8
+}
+
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffa1;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px lightgray;
+    transition: 1s;
+}
+
+.twilightZone {
+    background-color: #fff;
+}
+
+.cell:hover {
+    transform: scale(0.8)
+}
+
+#board-game {
+    margin: 300px auto;
+    max-width: 1300px;
+    max-height: 1300px;
+}
+
+#board-game {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+#team-blue {
+    background-color: #13b5eb;
+}
+
+#team-red {
+    background-color: #f3264f;
+}
+
+#players-info {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    background-color: #7ad0e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #0b7143;
+    opacity: 0.9
+}
+
+#message-para {
+    margin-top: 75px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #0b7143;
+    color: #0b7143;
+    opacity: 0.9
+}
+
+#roll-dice-btn {
+    display: block;
+    width: 75px;
+    padding: 7px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #0b7143;
+    font-family: 'Rubik Dirt';
+    transition: 1s;
+    border: none;
+}
+
+#turn {
+    margin-left: -2px;
+}
+
+#current-turn {
+    color: #0421dbde;
+
+}
+
+#dice {
+    display: inline;
+    margin-left: 3px;
+}
+
+#dice-value {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#roll-dice-btn:hover {
+    color: #fff;
+    letter-spacing: 2px;
+    background: #0b7143;
+}
+
+#roll-dice-btn:active {
+    transform: translate(4px, 8px);
+}
+
+
+table {
+    border-spacing: 10px;
+}
+
+.treasure {
+    position: relative;
+
+}
+
+.treasure img {
+
+    width: 45px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .9s;
+}
+
+.treasure img:hover {
+    transform: scale(2);
+}
