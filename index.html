@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Game</title>
     <link rel="stylesheet" href="styles/style.css">
+    <title>Find the treasure</title>
+
 </head>
 
 <body>
     <div id="board-game">
 
         <!-- players info -->
-        <div id="players-info">
-            <p id="turn">Current turn:</p>
-            <p id="current-turn">Team blue</p>
-            <button id="roll-dice-btn">Roll !</button>
-            <p id="dice">dice:</p>
-            <p id="dice-value"></p>
-            <p id="message-para"></p>
+        <div id="player-1" class="info">
+            <p class="turn">Current turn:</p>
+            <p id="blue-current-turn">Team blue</p>
+            <button id="team-blue-btn" class="btn">Roll !</button>
+            <p class="dice">dice:</p>
+            <p id="blue-dice-value" class="dice-value"></p>
+            <p class="message-para" id="message-blue"></p>
         </div>
         <!-- display message of current status -->
 
@@ -28,7 +29,7 @@
         <table>
             <!-- first row -->
             <tr>
-                <td class="cell" id="1">
+                <td class="cell" id="square1">
                     <!-- starting square with players -->
                     <div class='player' id="team-blue" position="0"></div>
                     <div class='player' id="team-red" position="0"></div>
@@ -120,8 +121,17 @@
                 </td>
             </tr>
         </table>
+        <!-- red-current-turn" -->
+        <div id="player-2" class="info">
+            <p class="turn">Current turn:</p>
+            <p id="red-current-turn"></p>
+            <button id="team-red-btn" class="btn">Roll !</button>
+            <p class="dice">dice:</p>
+            <p id="red-dice-value" class="dice-value"></p>
+            <p class="message-para" id="message-red"></p>
+        </div>
     </div>
-
+    <p id="version">v.2.0</p>
     <script src="js/game.js"></script>
 </body>
 
