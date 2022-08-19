@@ -1,6 +1,8 @@
 //DOM references
 const button1 = document.getElementById('team-blue-btn');
 const button2 = document.getElementById('team-red-btn');
+const turn1 = document.getElementById('turn-1');
+const turn2= document.getElementById('turn-2');
 const blueDiceValue = document.getElementById('blue-dice-value');
 const redDiceValue = document.getElementById('red-dice-value');
 const blueCurrentTurn = document.getElementById('blue-current-turn');
@@ -64,7 +66,9 @@ function rollBlueDice(){
      function displayRedTeam(){
              setTimeout( () => {
               redCurrentTurn.textContent ='Team red';
+              turn2.textContent ='Current turn';
               blueCurrentTurn.textContent= '';
+              turn1.textContent ='';
              },2000);
      }
 
@@ -93,6 +97,7 @@ function moveBluePlayer(){
       currentPlayer.style.transform = 'skew(30deg, 20deg)';
       messageBlue.innerHTML = 'oops! it seems you got into the twilight Zone. it takes you back two steps';
       messageBlue.style.padding ='10px';
+      messageBlue.style.marginTop = '150px';
       setTimeout( () => {
         currentPlayer.style.transform = 'none';
         messageBlue.innerHTML = '';
@@ -105,11 +110,10 @@ function moveBluePlayer(){
             nextRandomSquare.style.transform ='none';
         },1000);
       
-      }, 3000);
+      }, 4000);
     
     }
    if(currentPlayer.parentNode.id === 'square31') {
-    messageBlue.style.backgroundColor = '#7ad0e7';
     messageBlue.style.padding ='10px';
     messageBlue.innerHTML = 'Way to go! Team blue found the treasure first!';
     treasure.style.transform ='scale(2)';
@@ -142,8 +146,10 @@ function rollRedDice(){
 
 function displayBlueTeam(){
   setTimeout( () => {
-   blueCurrentTurn.textContent ='Team blue';
-   redCurrentTurn.textContent = '';
+    blueCurrentTurn.textContent ='Team blue';
+    turn1.textContent ='Current turn'
+    turn2.textContent ='';
+   redCurrentTurn.textContent ='';
   },2000);
 }
 
@@ -172,6 +178,7 @@ function moveRedPlayer(){
       currentPlayer.style.transform = 'skew(30deg, 20deg)';
       messageRed.innerHTML = 'oops! it seems you got into the twilight Zone. it takes you back two steps';
       messageRed.style.padding ='10px';
+      messageBlue.style.marginTop = '150px';
       setTimeout( () => {
         currentPlayer.style.transform = 'none';
         messageRed.innerHTML = '';
@@ -184,11 +191,10 @@ function moveRedPlayer(){
             nextRandomSquare.style.transform ='none';
         },1000);
       
-      }, 3000);
+      }, 4000);
     
     }
     if(currentPlayer.parentNode.id === 'square31') {
-      messageRed.style.backgroundColor = '#7ad0e7';
       messageRed.style.padding ='10px';
       messageRed.innerHTML = 'Way to go! Team Red found the treasure first!';
       treasure.style.transform ='scale(2)';

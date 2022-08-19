@@ -60,7 +60,8 @@ body {
     background-color: #7ad0e7;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #0b7143;
-    opacity: 0.9
+    opacity: 0.9;
+    letter-spacing: 0.5px;
 }
 
 #player-1 {
@@ -72,12 +73,13 @@ body {
 }
 
 .message-para {
-    margin-top: 75px;
+    margin-top: 150px;
     margin-bottom: 0px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #0b7143;
     color: #0b7143;
     opacity: 0.9;
+    letter-spacing: 0.5px;
 }
 
 .btn {
