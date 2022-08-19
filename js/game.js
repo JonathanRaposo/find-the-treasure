@@ -97,7 +97,7 @@ function moveBluePlayer(){
       currentPlayer.style.transform = 'skew(30deg, 20deg)';
       messageBlue.innerHTML = 'oops! it seems you got into the twilight Zone. it takes you back two steps';
       messageBlue.style.padding ='10px';
-      messageBlue.style.marginTop = '150px';
+      messageBlue.style.marginTop = '130px';
       setTimeout( () => {
         currentPlayer.style.transform = 'none';
         messageBlue.innerHTML = '';
@@ -178,7 +178,7 @@ function moveRedPlayer(){
       currentPlayer.style.transform = 'skew(30deg, 20deg)';
       messageRed.innerHTML = 'oops! it seems you got into the twilight Zone. it takes you back two steps';
       messageRed.style.padding ='10px';
-      messageBlue.style.marginTop = '150px';
+      messageBlue.style.marginTop = '130px';
       setTimeout( () => {
         currentPlayer.style.transform = 'none';
         messageRed.innerHTML = '';
