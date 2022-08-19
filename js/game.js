@@ -113,6 +113,10 @@ function moveBluePlayer(){
     messageBlue.style.padding ='10px';
     messageBlue.innerHTML = 'Way to go! Team blue found the treasure first!';
     treasure.style.transform ='scale(2)';
+    setTimeout( () => {
+      messageBlue.innerHTML = '';
+      messageBlue.style.padding = '0px'
+    },4000);
   
   } 
 }
@@ -188,6 +192,9 @@ function moveRedPlayer(){
       messageRed.style.padding ='10px';
       messageRed.innerHTML = 'Way to go! Team Red found the treasure first!';
       treasure.style.transform ='scale(2)';
-     
+      setTimeout( () => {
+        messageRed.innerHTML = '';
+        messageRed.style.padding = '0px'
+      },4000);
     } 
   }
