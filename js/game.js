@@ -49,7 +49,7 @@ setInterval(changeBackgroundColor,800);
 button1.addEventListener('click', () => {
    rollBlueDice();
    moveBluePlayer();
-   displayRedTeam()
+   displayRedTeam();
    
    
 });
@@ -200,7 +200,7 @@ function moveRedPlayer(){
       treasure.style.transform ='scale(2)';
       setTimeout( () => {
         messageRed.innerHTML = '';
-        messageRed.style.padding = '0px'
+        messageRed.style.padding = '0px';
       },4000);
     } 
   }
