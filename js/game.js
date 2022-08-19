@@ -14,8 +14,7 @@ const treasure = document.getElementById('gold');
 
 
 const squares = [
-   'square1','square2','square3','square7','square10','square11','square12','square8','square4','square5','square6','square9','square13','square14','square21','square20','square19','square18','square17','square16','square15','square22','square23','square24','square25','square26','square27','square28','square29','square30',
-   'square31'
+   'square1','square2','square3','square7','square10','square11','square12','square8','square4','square5','square6','square9','square13','square14','square21','square20','square19','square18','square17','square16','square15','square22','square23','square24','square25','square26','square27','square28','square29','square30', 'square31'
 ]
 //  event listener :
 rollDiceButton.addEventListener('click', function () {
@@ -25,7 +24,7 @@ rollDiceButton.addEventListener('click', function () {
    
 })
 function rollDice(){
-  let dice = 1 + Math.floor(Math.random() * 4 );
+  let dice = Math.floor(Math.random() * 4 ) + 1;
   diceValue.innerHTML = dice;
   return dice;
 }
@@ -33,12 +32,15 @@ function rollDice(){
   
 // functions:
 function movePlayer(){
-  let dice = rollDice();
+  let dice = diceValue.innerHTML;
   let currentPlayer = document.getElementById('team-blue')
   let currentPosition = Number(currentPlayer.getAttribute('position'));
-  let nextPosition = dice + currentPosition;
+  let nextPosition = Number(dice) + currentPosition;
+  if(nextPosition > 30){
+    nextPosition = 30;
+ }
   currentPlayer.setAttribute('position',nextPosition);
-  console.log(currentPlayer);
+  console.log(nextPosition);
   
   let nextRandomSquare = document.getElementById(squares[nextPosition])
   nextRandomSquare.appendChild(currentPlayer);
@@ -47,12 +49,7 @@ function movePlayer(){
     nextRandomSquare.style.transform = 'none';
    },1000)
    
-   if(nextPosition > 30){
-    nextPosition = 30;
-    currentPlayer.setAttribute('position', nextPosition);
-    nextRandomSquare = document.getElementById(squares[nextPosition -1]);
-    nextRandomSquare.appendChild(currentPlayer);
- }
+   
     if(currentPlayer.parentNode.id ==='square6' ||currentPlayer.parentNode.id ==='square27' || currentPlayer.parentNode.id ==='square15' || currentPlayer.parentNode.id ==='square20'){
       currentPlayer.style.backgroundColor = '#fff';
       currentPlayer.style.transform = 'skew(30deg, 20deg)';
