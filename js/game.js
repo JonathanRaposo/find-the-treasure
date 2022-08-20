@@ -7,7 +7,6 @@ const blueDiceValue = document.getElementById('blue-dice-value');
 const redDiceValue = document.getElementById('red-dice-value');
 const blueCurrentTurn = document.getElementById('blue-current-turn');
 const redCurrentTurn = document.getElementById('red-current-turn');
-const twilightZone4 = document.getElementById('square20')
 const messageBlue = document.getElementById('message-blue');
 const messageRed = document.getElementById('message-red');
 const messagePara = document.querySelector('.message-para');
@@ -15,6 +14,7 @@ const treasure = document.getElementById('gold');
 const twilightZone1 = document.getElementById('square6');
 const twilightZone2= document.getElementById('square27');
 const twilightZone3 = document.getElementById('square15');
+const twilightZone4 = document.getElementById('square20');
 
 
 const squares = [
