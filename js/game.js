@@ -104,7 +104,7 @@ function moveBluePlayer(){
         messageBlue.style.padding = '0px';
         nextRandomSquare = document.getElementById(squares[nextPosition - 2])
         nextRandomSquare.appendChild(currentPlayer);
-        nextRandomSquare.style.transform = 'scale(0.8)';
+        nextRandomSquare.style.transform = 'rotate(270deg)';
         currentPlayer.style.backgroundColor = '#13b5eb';
         setTimeout( () => {
             nextRandomSquare.style.transform ='none';
@@ -185,7 +185,7 @@ function moveRedPlayer(){
         messageRed.style.padding = '0px';
         nextRandomSquare = document.getElementById(squares[nextPosition - 2])
         nextRandomSquare.appendChild(currentPlayer);
-        nextRandomSquare.style.transform = 'scale(0.8)';
+        nextRandomSquare.style.transform = 'rotate(270deg)';
         currentPlayer.style.backgroundColor = '#f3264f';
         setTimeout( () => {
             nextRandomSquare.style.transform ='none';
